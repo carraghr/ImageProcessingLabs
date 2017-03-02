@@ -39,4 +39,3 @@ end
 image(256*mask);
 colormap(gray(256));
 
-
