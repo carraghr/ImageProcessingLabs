@@ -1,0 +1,165 @@
+
+	This is a Classroom License for instructional use only.
+	Research and commercial use is prohibited.
+>> load('ab.mat');
+>> load('ab.mat');
+>> image(ab);
+>> colormap(gray(256));
+>> figure;
+>> y = fft2(256*log(abs(y))/max(max(abs(y))));
+Undefined function or variable 'y'.
+ 
+>> y = fft2(ab);
+>> image(256*log(abs(y))/max(max(abs(y))));
+>> figure;
+>> clear all
+>> clear all hidden
+>> image(256*(abs(y))/max(max(abs(y))));
+Undefined function or variable 'y'.
+ 
+>> load('ab.mat');
+>> y = fft2(ab);
+>> image(256*(abs(y))/max(max(abs(y))));
+>> colormap(gray(256));
+>> colormap(default);
+Undefined function or variable 'default'.
+ 
+>> colormap('default');
+>> mask = zeros(256,256);
+>> mask = createMask3(mask,y,3);
+The input co-ordinates are: 
+         X, Y
+   27.9286  125.8801
+   46.2143  131.1199
+
+   55.6521  128.8743
+   73.9378  132.6170
+
+   83.9654  126.6287
+  101.0714  131.8684
+
+>> mask = 1 - mask;
+>> y2 = y *. mask;
+ y2 = y *. mask;
+        |
+Error: Unexpected MATLAB operator.
+ 
+>> y2 = y .* mask;
+>> x = ifft2(y2);
+>> figure;
+>> image(256*abs(x)/mask(mask(abs(x))));
+Subscript indices must either be real positive integers or logicals.
+ 
+>> image(256*abs(x)/max(max(abs(x))));
+>> colormap(gray(256));
+>> mask = zeros(256,256);
+>> mask = createMask3(mask,y,4);
+The input co-ordinates are: 
+         X, Y
+    1.0000  126.2514
+    4.5000  131.0946
+
+    6.0484  127.6351
+   11.2097  131.7865
+
+   13.5323  125.5595
+   18.4355  131.7865
+
+    5.7903  125.5595
+   11.2097  127.9811
+
+>> mask = 1 - mask;
+>> y2 = y .* mask;
+>> x = ifft2(y2);
+>> image(256*abs(x)/max(max(abs(x))));
+>> mask = createMask3(mask,y,4);
+The input co-ordinates are: 
+         X, Y
+  109.9194    1.0000
+  145.3111   16.5936
+
+Error using ginput (line 112)
+Interrupted by figure deletion
+
+Error in createMask3 (line 42)
+        [x,y] = ginput(2);
+ 
+>> mask = zeros(256,256);
+>> mask = createMask3(mask,y,4);
+The input co-ordinates are: 
+         X, Y
+  108.1498    2.3713
+  152.9793   16.5936
+
+  227.8917    2.3713
+  256.0000   21.0848
+
+   22.6198   18.8392
+    3.1544    1.6228
+
+    1.0000    1.6228
+   22.0300   18.8392
+
+>> y2 = y .* mask;
+>> x = ifft2(y2);
+>> image(256*abs(x)/max(max(abs(x))));
+>> mask = zeros(256,256);
+>> mask = createMask3(mask,y,4);
+The input co-ordinates are: 
+         X, Y
+   96.9424    2.3713
+  168.9055   32.3129
+
+  230.8410    1.6228
+  256.0000   18.8392
+
+  236.1498  240.4064
+  256.0000  255.3772
+
+  214.9147  201.4825
+  218.4539  200.7339
+
+>> mask = zeros(256,256);
+>> mask = createMask3(mask,y,1);
+The input co-ordinates are: 
+         X, Y
+   86.9147    1.6228
+  173.0346   30.8158
+
+>> y2 = y .* mask;
+>> x = ifft2(y2);
+>> image(256*abs(x)/max(max(abs(x))));
+>> load('abdiag.mat')
+>> image(abdiag);
+>> colormap(gray(256));
+>> y = fft2(abdiag);
+>> image(256*abs(y)/max(max(abs(y))));
+>> figure;
+>> image(256*abs(y)/max(max(abs(y))));
+>> mask = zeros(256,256);
+>> mask = createMask3(mask,y,1);
+The input co-ordinates are: 
+         X, Y
+   44.4447   39.7982
+   86.3249   88.4532
+
+>> y2 = y .* mask;
+>> x = ifft2(y2);
+>> image(256*abs(x)/max(max(abs(x))));
+>> colormap(gray(256));
+>> mask = zeros(256,256);
+>> mask = createMask3(mask,y,1);
+The input co-ordinates are: 
+         X, Y
+   47.5968   39.7649
+   87.8548   92.6946
+
+>> y2 = y .* mask;
+>> x = ifft2(y2);
+>> image(256*abs(x)/max(max(abs(x))));
+>> image(256*abs(x)/max(max(abs(x))));
+>> colormap(gray(256));
+>> mask = zeros(256,256);
+>> image(256*abs(y)/max(max(abs(y))));
+>> colormap('default');
+>> 
